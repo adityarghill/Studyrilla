@@ -19,7 +19,7 @@
             }
         });
 
-        // Sign in button functionality (placeholder)
+        // Sign in button functionality
         document.getElementById('signinBtn').addEventListener('click', function() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
@@ -29,6 +29,6 @@
                 return;
             }
 
-            // Add your sign-in logic here
-            console.log('Sign in attempted with:', username);
+            // AFTER SUCCESS SIGN-IN → redirect to setup page
+            window.location.href = "../../components/pages/SetupPage/OnBoarding.html";
         });
