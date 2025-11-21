@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../../../css/SignIn.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Sign In</h1>
+        <div class="logo-wrapper">
+            <img src="https://i.ibb.co.com/GvNCnRrz/New-Project-234-BE87-AE6.gif" alt="App Logo" class="logo">
+        </div>
+
+        <!-- Username / Email -->
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username or Email">
+        </div>
+
+        <!-- Password -->
+        <div class="input-group password-group">
+            <input type="password" id="password" placeholder="Password">
+            <span class="toggle-password" id="togglePassword">
+                <!-- Eye Open Icon (default) -->
+                <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <!-- Eye Closed Icon (hidden by default) -->
+                <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+            </span>
+        </div>
+
+        <!-- Sign In button -->
+        <button class="signin-btn" id="signinBtn">Sign In</button>
+
+        <div class="social-login">
+            <p class="social-text">Or Continue With</p>
+
+            <div class="social-buttons">
+                <!-- Google -->
+                <button class="social-btn google-btn">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+                </button>
+
+                <!-- Discord -->
+                <button class="social-btn discord-btn">
+                    <img src="../../img/discord-icon-svgrepo-com.svg">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Register link -->
+        <p class="register-text">
+            Don't have account?
+            <a href="../pages/RegisterPage.html">Register here</a>
+        </p>
+
+    </div>
+
+    <script src="../../../javascript/SignIn.js"></script>
+</body>
+
+</html>

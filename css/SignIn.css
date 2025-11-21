@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Mitr:wght@200;300;400;500;600;700&family=Righteous&display=swap');
+:root {
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: "Mitr", sans-serif;
+    --radius: 12px;
+    --black: #000;
+}
+
+body {
+    background: #f8f8f8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-body);
+}
+
+.container {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 240px;
+    height: auto;
+    max-width: 100%;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #000;
+    border-radius: var(--radius);
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.password-group input {
+    padding-right: 46px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+.toggle-password svg {
+    width: 22px;
+    height: 22px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 14px 0;
+    background: var(--black);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    touch-action: manipulation;
+}
+
+.signin-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.signin-btn:active {
+    transform: translateY(0);
+    background: #222;
+}
+
+.register-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.register-text a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    touch-action: manipulation;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .logo {
+        width: 100px;
+        margin-bottom: 16px;
+    }
+    .input-group {
+        margin-bottom: 20px;
+    }
+    .input-group input {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+    .password-group input {
+        padding-right: 44px;
+    }
+    .toggle-password svg {
+        width: 20px;
+        height: 20px;
+    }
+    .signin-btn {
+        padding: 12px 0;
+        font-size: 16px;
+    }
+    .register-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        padding: 12px;
+    }
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 80px;
+        margin-bottom: 12px;
+    }
+    .input-group {
+        margin-bottom: 16px;
+    }
+    .input-group input {
+        padding: 10px 14px;
+    }
+    .password-group input {
+        padding-right: 42px;
+    }
+    .signin-btn {
+        padding: 10px 0;
+    }
+    .register-text {
+        margin-top: 16px;
+    }
+}
+
+
+/* Social Login Section */
+
+.social-login {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.social-text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    flex: 1;
+    min-width: 140px;
+    max-width: 180px;
+    padding: 14px 24px;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Brand-specific styling */
+
+.google-btn {
+    border-color: #000;
+}
+
+.google-btn:hover {
+    border-color: #000;
+    background: #f8f8f8;
+}
+
+.discord-btn {
+    border-color: #5865F2;
+}
+
+.discord-btn:hover {
+    border-color: #5865F2;
+    background: #f0f2ff;
+}

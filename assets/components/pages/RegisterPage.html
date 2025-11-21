@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../../../css/Register.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Create Account</h1>
+
+        <!-- Nickname -->
+        <div class="input-group">
+            <label for="nickname">Nickname</label>
+            <input type="text" id="nickname" placeholder="Enter your nickname" autocomplete="nickname">
+            <div class="validation-msg" id="nicknameMsg"></div>
+        </div>
+
+        <!-- Username -->
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Choose a username" autocomplete="username">
+            <div class="validation-msg" id="usernameMsg"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" autocomplete="email">
+            <div class="validation-msg" id="emailMsg"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group password-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+                <input type="password" id="password" placeholder="Create a strong password" autocomplete="new-password">
+                <span class="toggle-password" data-target="password">
+                    <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                </span>
+            </div>
+            <div class="password-strength" id="passwordStrength" style="display: none;">
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strengthFill"></div>
+                </div>
+                <div class="strength-text" id="strengthText"></div>
+            </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="input-group password-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="input-wrapper">
+                <input type="password" id="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
+                <span class="toggle-password" data-target="confirmPassword">
+                    <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                </span>
+            </div>
+            <div class="validation-msg" id="confirmPasswordMsg"></div>
+        </div>
+
+        <!-- Request Token -->
+        <button class="token-btn" id="tokenBtn">Request Verification Token</button>
+
+        <!-- Register Button -->
+        <button class="register-btn" id="registerBtn">Create Account</button>
+
+        <!-- Success message -->
+        <div class="success-message" id="successMsg">
+            ✓ Registration successful! Redirecting...
+        </div>
+
+        <!-- Social Login -->
+        <div class="social-login">
+            <div class="divider">
+                <span>Or sign up with</span>
+            </div>
+            <div class="social-buttons">
+                <button class="social-btn google-btn" onclick="signUpWithGoogle()">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                    <span>Google</span>
+                </button>
+                <button class="social-btn discord-btn" onclick="signUpWithDiscord()">
+                    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
+                    <span>Discord</span>
+                </button>
+            </div>
+        </div>
+
+        <p class="login-text">
+            Already have an account?
+            <a href="SignIn.html">Sign In</a>
+        </p>
+
+    </div>
+
+    <script src="../../../javascript/Register.js"></script>
+</body>
+
+</html>
