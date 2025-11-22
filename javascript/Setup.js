@@ -87,12 +87,16 @@
         }
 
         function handleComplete() {
+            // Optional: kalau mau simpan data sebelum pindah halaman
             console.log('Onboarding complete!', {
                 profilePic,
                 nickname
             });
-            alert('Onboarding complete! Check console for data.');
+
+            // Redirect ke halaman lain
+            window.location.href = "../SetupPage/Main/HomePage.html";
         }
+
 
         // Profile Picture Upload
         profileUpload.addEventListener('change', (e) => {

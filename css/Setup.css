@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Mitr:wght@200;300;400;500;600;700&family=Righteous&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -170,6 +171,27 @@ h1 {
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.Wet {
+    display: block;
+    /* makes centering easy */
+    margin: 0 auto;
+    /* horizontal center */
+    width: 60%;
+    /* responsive size */
+    max-width: 250px;
+    /* avoid overscaling */
+    height: auto;
+    /* keep proportions */
+}
+
+@media (max-width: 480px) {
+    .Wet {
+        width: 70%;
+        /* bigger on small screens */
+        max-width: 200px;
+    }
 }
 
 
