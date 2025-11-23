@@ -23,7 +23,7 @@ body {
 
 body {
     font-family: "Inter", sans-serif;
-    background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3I4bXV5bXUxYW5ycWF0dDc1ODN2YWk4d2w0YjRyYzIzMWxuaXdjZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Txmx5HmLg7mgy5eMdC/giphy.gif');
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjRkc3AyOWVmaXVvbGl0eDgzcXRqbGRuc2JyZTg4a3JoeWwyNnhybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aUTye2tUx1fz2/giphy.gif');
     background-repeat: no-repeat;
     background-size: cover;
     /* biar full screen, tidak tile */
@@ -1313,4 +1313,40 @@ body {
     .contact-detail {
         padding: 24px;
     }
+}
+
+
+/* Slide in from Right */
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Slide out to Right */
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.add-modal {
+    animation: slideFromRight 0.35s ease-out;
+}
+
+.add-modal.closing {
+    animation: slideToRight 0.25s ease-in forwards;
 }

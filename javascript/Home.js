@@ -461,3 +461,11 @@
                 closeStory();
             }
         });
+
+        function closeAddModal() {
+            addModal.classList.add('closing');
+
+            setTimeout(() => {
+                addModal.classList.remove('show', 'closing');
+            }, 250); // harus sesuai dengan slideToRight duration
+        }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Isabelle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/ChatDetail.css">
+</head>
+
+<body>
+    <div class="chat-container">
+
+        <!-- CHAT HEADER -->
+        <div class="chat-header">
+            <button class="back-btn" id="backBtn">‹</button>
+            <img src="https://i.pravatar.cc/150?img=45" class="chat-avatar" alt="Isabelle">
+            <div class="chat-info">
+                <h3 id="chatName">Isabelle</h3>
+                <span id="chatStatus">Online</span>
+            </div>
+
+            <div class="chat-actions">
+                <button class="icon-btn" id="searchBtn">🔍</button>
+                <button class="icon-btn" id="menuBtn">⋮</button>
+            </div>
+        </div>
+
+        <!-- MENU DROPDOWN -->
+        <div class="menu-dropdown" id="menuDropdown">
+            <div class="menu-item" id="clearChat">Clear Chat</div>
+            <div class="menu-item" id="changeWallpaper">Change Wallpaper</div>
+            <div class="menu-item" id="exportChat">Export Chat</div>
+        </div>
+
+        <!-- CHAT MESSAGES -->
+        <div class="chat-body" id="chatBody">
+            <div class="date-divider">Today</div>
+
+            <div class="message-wrapper left">
+                <div class="bubble left">
+                    Hey, how are you?
+                    <span class="time">10:10 AM</span>
+                </div>
+            </div>
+
+            <div class="message-wrapper right">
+                <div class="bubble right">
+                    I'm good! Working on our app.
+                    <span class="time">10:11 AM</span>
+                </div>
+            </div>
+
+            <div class="message-wrapper left">
+                <div class="bubble left">
+                    GOOD!! 🔥🔥
+                    <span class="time">10:12 AM</span>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+
+        <!-- TYPING BAR -->
+        <div class="chat-input">
+            <button class="input-icon" id="photoBtn">📷</button>
+            <button class="input-icon" id="gifBtn">GIF</button>
+
+            <input type="text" id="msgInput" placeholder="Message" autocomplete="off">
+            <button class="send-btn" id="sendBtn" disabled>➤</button>
+        </div>
+
+        <!-- Hidden file input -->
+        <input type="file" id="wallpaperInput" accept="image/*">
+        <input type="file" id="photoInput" accept="image/*">
+    </div>
+
+    <!-- Clear Chat Modal -->
+    <div class="modal-backdrop" id="clearModal">
+        <div class="modal">
+            <h3>Clear Chat?</h3>
+            <p>This will delete all messages in this conversation.</p>
+            <div class="modal-actions">
+                <button class="modal-btn cancel" id="cancelClear">Cancel</button>
+                <button class="modal-btn confirm" id="confirmClear">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIF Picker Modal -->
+    <div class="gif-modal" id="gifModal">
+        <div class="gif-modal-header">
+            <h3>Send GIF</h3>
+            <button class="gif-close" id="gifClose">×</button>
+        </div>
+        <div class="gif-search">
+            <input type="text" id="gifSearchInput" placeholder="Search GIFs...">
+        </div>
+        <div class="gif-grid" id="gifGrid">
+            <!-- GIFs will be loaded here -->
+        </div>
+    </div>
+
+    <script src="../../../../javascript/ChatDetail.js"></script>
+</body>
+
+</html>

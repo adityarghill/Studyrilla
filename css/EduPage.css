@@ -1,0 +1,456 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --bg: #ffffff;
+            --card: #fafafa;
+            --black: #171717;
+            --muted: #737373;
+            --border: #e5e5e5;
+            --blue: rgb(3, 60, 184);
+        }
+        
+        body {
+            background: var(--bg);
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--black);
+            line-height: 1.5;
+        }
+        /* Container */
+        
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+        /* Top Bar */
+        
+        .top-bar {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .top-bar h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .top-actions {
+            display: flex;
+            gap: 0px;
+            align-items: center;
+        }
+        
+        .diamond-badge {
+            background: none;
+            border: 1px solid var(--border);
+            height: 40px;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-weight: 600;
+            color: var(--blue);
+            font-size: 14px;
+        }
+        
+        .diamond-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .diamond-badge:active {
+            transform: scale(0.98);
+        }
+        
+        .notif-btn {
+            position: relative;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .notif-btn:hover {
+            background: var(--card);
+        }
+        
+        .notif-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .notif-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--black);
+            color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Header */
+        
+        .header {
+            margin-bottom: 24px;
+        }
+        
+        .header p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+        /* Promo Slider */
+        
+        .promo-slider {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        
+        .promo-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.4s ease;
+        }
+        
+        .promo-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .promo-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .promo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+        }
+        
+        .promo-overlay h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        
+        .promo-overlay p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .promo-dots {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+        
+        .promo-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .promo-dot.active {
+            background: white;
+            width: 24px;
+            border-radius: 4px;
+        }
+        /* Section */
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .view-all {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .view-all:hover {
+            background: var(--card);
+        }
+        
+        .view-all:active {
+            transform: scale(0.97);
+        }
+        /* Scroll List */
+        
+        .scroll-list {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+        
+        .scroll-list::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .scroll-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .scroll-list::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+        /* Card */
+        
+        .card {
+            min-width: 240px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card:active {
+            transform: translateY(-2px);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 140px;
+            background: var(--card);
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .card-content {
+            padding: 16px;
+        }
+        
+        .card-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .card-content p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+        
+        .card-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            background: var(--black);
+            color: white;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+        
+        .card-tag.free {
+            background: var(--card);
+            color: var(--black);
+            border: 1px solid var(--border);
+        }
+        /* Quiz List */
+        
+        .quiz-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        
+        .quiz-item {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quiz-item:hover {
+            background: var(--card);
+            transform: translateY(-2px);
+        }
+        
+        .quiz-item:active {
+            transform: translateY(0);
+        }
+        
+        .quiz-title {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .quiz-arrow {
+            font-size: 18px;
+            color: var(--muted);
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .page {
+                padding: 0 16px 80px;
+            }
+            .top-bar {
+                padding: 16px 0;
+            }
+            .top-bar h1 {
+                font-size: 22px;
+            }
+            .diamond-badge {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+            .notif-btn {
+                width: 36px;
+                height: 36px;
+            }
+            .promo-slider {
+                height: 180px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .card {
+                min-width: 200px;
+            }
+            .card-image {
+                height: 120px;
+            }
+            .quiz-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page {
+                padding: 0 12px 80px;
+            }
+            .top-bar {
+                padding: 12px 0;
+            }
+            .top-bar h1 {
+                font-size: 20px;
+            }
+            .diamond-badge {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+            .notif-btn {
+                width: 34px;
+                height: 34px;
+            }
+            .notif-badge {
+                width: 16px;
+                height: 16px;
+                font-size: 10px;
+            }
+            .promo-slider {
+                height: 160px;
+                border-radius: 12px;
+            }
+            .promo-overlay {
+                padding: 16px;
+            }
+            .promo-overlay h2 {
+                font-size: 16px;
+            }
+            .promo-overlay p {
+                font-size: 13px;
+            }
+            .section-title {
+                font-size: 17px;
+            }
+            .view-all {
+                font-size: 13px;
+                padding: 5px 10px;
+            }
+            .card {
+                min-width: 180px;
+            }
+            .card-image {
+                height: 100px;
+            }
+            .card-content {
+                padding: 12px;
+            }
+            .card-content h4 {
+                font-size: 15px;
+            }
+            .card-content p {
+                font-size: 12px;
+            }
+        }

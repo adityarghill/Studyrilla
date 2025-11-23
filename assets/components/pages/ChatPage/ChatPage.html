@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StudyRilla — Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/Chat.css">
+</head>
+
+<body>
+    <main class="page" id="app">
+        <!-- Banner GIF -->
+        <div class="banner">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDFtNWZhOHd5cndjbHBvOXFnOWUyYXhlZzY2ZTFxM2s0MWFlaW16dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26vUucK24XyuAy9a0/giphy.gif" alt="Chat banner">
+        </div>
+
+        <!-- Search bar -->
+        <div class="search-container">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search chats...">
+        </div>
+
+        <!-- Private Chats Section -->
+        <section class="section" id="privateSection">
+            <div class="section-header">
+                <h3>Private Chats</h3>
+                <span class="section-count" id="privateCount">3</span>
+            </div>
+
+            <div class="list" id="privateList">
+                <a href="#" class="chat-item unread" data-type="private" data-chat-page="">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Arya">
+                        <span class="status"></span>
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-row">
+                            <div class="title">Arya Sharma</div>
+                            <div class="time">14:22</div>
+                        </div>
+                        <div class="chat-preview">Hey — mau belajar bareng malem ini?</div>
+                    </div>
+                    <span class="unread-badge">2</span>
+                </a>
+
+                <a href="#" class="chat-item" data-type="private" data-chat-page="">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Budi">
+                        <span class="status"></span>
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-row">
+                            <div class="title">Budi Santoso</div>
+                            <div class="time">13:10</div>
+                        </div>
+                        <div class="chat-preview">Sent a sticker</div>
+                    </div>
+                </a>
+
+                <a href="#" class="chat-item" data-type="private" data-chat-page="">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=20" alt="Cici">
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-row">
+                            <div class="title">Cici Wong</div>
+                            <div class="time">Yesterday</div>
+                        </div>
+                        <div class="chat-preview">Replied: Good job!</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Group Chats Section -->
+        <section class="section" id="groupSection">
+            <div class="section-header">
+                <h3>Group Chats</h3>
+                <span class="section-count" id="groupCount">2</span>
+            </div>
+
+            <div class="list" id="groupList">
+                <a href="#" class="chat-item unread" data-type="group" data-chat-page="">
+                    <div class="avatar">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&h=400&fit=crop" alt="Math Squad">
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-row">
+                            <div class="title">Math Squad</div>
+                            <div class="time">13:01</div>
+                        </div>
+                        <div class="chat-preview">Kenny: Guys, siap untuk challenge?</div>
+                    </div>
+                    <span class="unread-badge">5</span>
+                </a>
+
+                <a href="#" class="chat-item" data-type="group" data-chat-page="">
+                    <div class="avatar">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400&h=400&fit=crop" alt="Study Buddies">
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-row">
+                            <div class="title">Study Buddies</div>
+                            <div class="time">Mon</div>
+                        </div>
+                        <div class="chat-preview">New materials uploaded by Tutor Nina</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Button -->
+    <button class="add-btn" id="addBtn" title="Add Contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+    </button>
+
+    <!-- Add Contact Modal -->
+    <div id="addModal" class="modal-backdrop">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add Contact</h3>
+                <button class="close-btn" id="closeModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-input" id="contactUsername" placeholder="Enter username...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="contactEmail" placeholder="Enter email address...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Type</label>
+                    <select class="form-input" id="chatType">
+                        <option value="private">Private Chat</option>
+                        <option value="group">Group Chat</option>
+                    </select>
+                </div>
+                <button class="btn" id="createBtn">Add Contact</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <div id="nav-placeholder"></div>
+
+    <script src="../../../../javascript/Chat.js"></script>
+</body>
+
+</html>
